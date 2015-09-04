@@ -9,7 +9,8 @@ GOTO end
 SETX TEAMCITY_DATA_PATH C:\TeamCityServerData /m
 XCOPY C:\TeamCity-9.1.1\TeamCity C:\TeamCityServer /s /q /i
 NETSH advfirewall firewall add rule name="TeamCity Server" dir=in action=allow protocol=TCP localport=80
-CALL C:\TeamCityServer\bin\teamcity-server service install /runAsSystem
+REM CALL C:\TeamCityServer\bin\teamcity-server service install /runAsSystem
+CALL C:\TeamCityServer\bin\runAll.bat start
 GOTO end
 
 :uninstall
