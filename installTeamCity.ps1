@@ -8,7 +8,7 @@ $JavaExists = $false
 
 while($JavaExists -eq $false){
     try{
-        start-process  javad  -ArgumentList "-version" -NoNewWindow
+        start-process  java  -ArgumentList "-version" -NoNewWindow
         $JavaExists = $true
     }
     catch{
