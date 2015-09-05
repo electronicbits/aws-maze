@@ -2,7 +2,7 @@
 #Get-WmiObject -Class Win32_Product  -Filter "Name like 'Java%'" | Select -Expand Version
 #Start-Process "C:\\Downloads\jdk-8u60-windows-x64\\jdk-8u60-windows-x64.exe /s /L jdk_install.log" -Wait
 
-C:\\Java8.6\\jdk-8u60-windows-x64\\jdk-8u60-windows-x64.exe /s /L jdk_install.log
+Start-Process -FilePath "C:\\Downloads\\jdk-8u60-windows-x64\\jdk-8u60-windows-x64.exe" -ArgumentList "/s /L jdk_install.log"
 
 $JavaExists = $false
 
